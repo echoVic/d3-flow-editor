@@ -1,2 +1,5 @@
 # flowEditor
-轻量级SVG流程编辑器
+
+## 介绍
+
+flowEditor——轻量级 SVG 流程编辑器

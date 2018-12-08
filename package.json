@@ -1,12 +1,14 @@
 {
-  "name": "floweditor",
-  "version": "0.0.1",
+  "name": "d3-flow-editor",
+  "version": "0.0.2",
   "description": "一款轻量级的SVG流程编辑器",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --open --config webpack.dev.js --mode development",
+    "dev:dev": "cross-env BRANCH=dev webpack-dev-server --open --config webpack.dev.js --mode development",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
@@ -23,11 +25,15 @@
   },
   "homepage": "https://github.com/echoVic/flowEditor#readme",
   "devDependencies": {
+    "autoprefixer": "^9.4.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.0.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^12.0.0",
@@ -35,9 +41,24 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "glob": "^7.1.3",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "svg.js": "^2.7.1",
+    "url-loader": "^1.1.2",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "user": "0.0.0"
   }
 }

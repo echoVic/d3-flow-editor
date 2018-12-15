@@ -26,7 +26,17 @@ module.exports = {
     },
     {
       test: /\.(scss|sass)$/, // 正则匹配以.scss和.sass结尾的文件
-      use: ['style-loader', 'css-loader', 'sass-loader'] // 需要用的loader，一定是这个顺序，因为调用loader是从右往左编译的
+      use: ExtractTextPlugin.extract({ // 这里我们需要调用分离插件内的extract方法
+        fallback: 'style-loader', // 相当于回滚，经postcss-loader和css-loader处理过的css最终再经过style-loader处理
+        use: [{
+          loader: 'css-loader'
+        },
+        {
+          loader: 'sass-loader'
+        }
+        ], // 需要用的loader，一定是这个顺序，因为调用loader是从右往左编译的
+        publicPath: '../' // 给背景图片设置一个功能路径
+      })
     },
     {
       test: /\.(js|jsx)$/,

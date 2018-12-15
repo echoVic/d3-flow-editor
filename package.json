@@ -1,6 +1,6 @@
 {
   "name": "d3-flow-editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "一款轻量级的SVG流程编辑器",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "clean-webpack-plugin": "^1.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.0.0",
+    "d3": "^5.7.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-standard": "^12.0.0",

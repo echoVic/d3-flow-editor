@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
     <title>example</title>
 </head>
 
 <body>
-    <h2>example</h2>
-    <div id='root'></div>
+    <div class="f_e_container">
+        <div class="f_e_toolbar"></div>
+        <div class="f_e_editor">
+            <div class="f_e_shape_panel"></div>
+            <div id="f_e_editor_viewport" class="f_e_editor_viewport">
+                <canvas width="600" height="600" id="f_e_editor_grid" class="f_e_editor_grid"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- <div id='root'></div>
     <script>
         var FE = window.flowEditor
         var editor = new FE('root')
-    </script>
+    </script> -->
 </body>
 
 </html>
